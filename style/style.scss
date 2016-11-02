@@ -1,0 +1,70 @@
+// run this command at the root: sass --watch style/style.scss:style/style.css
+$blue: #2d3f4b;
+$red: #f04442;
+$white: #ffeaaa;
+$yellow: #f4c435;
+$green: #97be47;
+
+* {
+  font-family: "brandon-grotesque", 'Dosis', sans-serif;
+}
+
+body {
+  background-color: $yellow;
+  margin: 0;
+}
+
+/* modular scss */
+@import 'about';
+@import 'grid';
+@import 'tech';
+@import 'groupPhoto';
+
+/*------top container-----*/
+
+#headingContainer {
+  position: relative;
+  background: $yellow;
+
+  .topImg {
+    width: 100%;
+    display: block;
+  }
+
+  #topTitle {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    background: $blue;
+    color: $white;
+    width: 90%;
+    margin: 0px auto;
+
+    h1 {
+      font-size: 50px;
+      margin: 0;
+      text-align: center;
+      padding: 50px 0 15px
+    }
+  }
+}
+
+
+/*-----main container---*/
+.mainContainer {
+  margin-top: 0;
+  background-color: $blue;
+  width: 90%;
+  margin: 0 auto;
+
+  .contentContainer {
+    width: 94%;
+    margin: 0 auto;
+  }
+}
+
+.about,
+.techStack,
+.groupPhoto {
+  border-top: 3px solid $red;
+}
